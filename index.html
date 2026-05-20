@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fitness Life</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="index.html" class="logo-box">
+            <img src="img/logo.png" class="nav-logo">
+            <span class="logo-text">Fitness Life</span>
+        </a>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="#categorias">Categorías</a>
+            <a href="Calculadora.html">Calculadora</a>
+        </nav>
+
+    </div>
+
+</header>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>Entrená mejor. Viví mejor.</h1>
+
+        <p>Rutinas, nutrición y progreso en un solo lugar.</p>
+
+        <!-- SLIDER -->
+        <div class="hero-slider">
+
+            <div class="slides">
+
+                <img src="img/gym1.png" class="slide active">
+                <img src="img/gym2.png" class="slide">
+                <img src="img/gym3.png" class="slide">
+                <img src="img/gym4.png" class="slide">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<main class="container" id="categorias">
+
+    <div class="section-title">
+        <h2>Explorar categorías</h2>
+    </div>
+
+    <div class="cards">
+
+        <a href="/ganar-musculo/index.html" class="card">
+            <h3>Ganar músculo</h3>
+            <p>Hipertrofia y fuerza progresiva.</p>
+        </a>
+
+        <a href="/perder-grasa/index .html" class="card">
+            <h3>Perder grasa</h3>
+            <p>Definición y déficit controlado.</p>
+        </a>
+
+        <a href="recomposicion/index.html" class="card">
+            <h3>Recomposición</h3>
+            <p>Músculo + reducción de grasa.</p>
+        </a>
+
+        <a href="Calculadora.html" class="card">
+            <h3>Calculadora</h3>
+            <p>IMC, calorías y macros.</p>
+        </a>
+
+    </div>
+
+</main>
+
+<footer class="footer">
+    <p>© 2026 Fitness Life</p>
+</footer>
+
+<script>
+
+const slides = document.querySelectorAll(".slide");
+
+let current = 0;
+
+setInterval(() => {
+
+    slides[current].classList.remove("active");
+
+    current = (current + 1) % slides.length;
+
+    slides[current].classList.add("active");
+
+}, 3500);
+
+</script>
+
+</body>
+</html>
